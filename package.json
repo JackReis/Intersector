@@ -4,8 +4,8 @@
   "description": "Your Figma widget",
   "scripts": {
     "build": "esbuild widget-src/code.tsx --bundle --outfile=dist/code.js --target=es6",
-    "lint": "eslint --ext .ts,.tsx --ignore-pattern node_modules .",
-    "lint:fix": "eslint --ext .ts,.tsx --ignore-pattern node_modules --fix .",
+    "lint": "eslint widget-src --ext .ts,.tsx --no-ignore",
+    "lint:fix": "eslint widget-src --ext .ts,.tsx --no-ignore --fix",
     "tsc": "tsc --noEmit -p widget-src",
     "watch": "npm run build -- --watch"
   },

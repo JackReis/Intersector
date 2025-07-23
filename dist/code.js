@@ -1,4 +1,10 @@
-const { widget } = figma
-widget.register(function ErrorWidget() {
-  throw new Error("This widget template uses TypeScript. Follow the instructions in README.md to build this file.")
-})
+"use strict";
+(() => {
+  // widget-src/code.tsx
+  var { widget } = figma;
+  var { Frame } = widget;
+  function Widget() {
+    return /* @__PURE__ */ figma.widget.h(Frame, { width: 100, height: 100, fill: "#C4C4C4" });
+  }
+  widget.register(Widget);
+})();

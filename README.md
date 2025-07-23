@@ -1,36 +1,28 @@
-Below are the steps to get your widget running. You can also find instructions at:
+# Intersector for FigJam
 
-https://www.figma.com/widget-docs/setup-guide/
+Intersector is a FigJam widget inspired by the Hopper plugin for Figma. Instead of drawing a simple cross when two lines intersect, Intersector creates a clean arc to help visualize connections between lines in your FigJam files.
 
-This widget template uses TypeScript and NPM, two standard tools in creating JavaScript applications.
+![Example](hop.png)
 
-First, download Node.js which comes with NPM. This will allow you to install TypeScript and other
-libraries. You can find the download link here:
+## Installation
 
-https://nodejs.org/en/download/
+1. Install [Node.js](https://nodejs.org/en/download/) which includes npm.
+2. Run `npm install` to install development dependencies.
+3. Build the widget with `npm run build`.
+4. In FigJam, choose **Import widget from manifest** and select `manifest.json` from this repository.
 
-Next, install TypeScript, esbuild and the latest type definitions by running:
+## Usage
 
-npm install
+1. Select two straight lines in your FigJam file.
+2. Run **Intersector** from the widgets menu.
+3. The widget replaces the default intersection with an arc connecting the lines.
 
-If you are familiar with JavaScript, TypeScript will look very familiar. In fact, valid JavaScript code
-is already valid Typescript code.
+## Development
 
-TypeScript adds type annotations to variables. This allows code editors such as Visual Studio Code
-to provide information about the Figma API while you are writing code, as well as help catch bugs
-you previously didn't notice.
+- `npm run watch` – rebuilds automatically when source files change.
+- Source code lives in `widget-src/` and compiles to `dist/code.js`.
+- After each build, reload the widget in FigJam to see changes.
 
-For more information, visit https://www.typescriptlang.org/
+## License
 
-Using TypeScript requires a compiler to convert TypeScript (widget-src/code.tsx) into JavaScript (dist/code.js)
-for the browser to run. We use esbuild to do this for us.
-
-We recommend writing TypeScript code using Visual Studio code:
-
-1. Download Visual Studio Code if you haven't already: https://code.visualstudio.com/.
-2. Open this directory in Visual Studio Code.
-3. Compile TypeScript to JavaScript: Run the "Terminal > Run Build Task..." menu item,
-   then select "npm: watch". You will have to do this again every time
-   you reopen Visual Studio Code.
-
-That's it! Visual Studio Code will regenerate the JavaScript file every time you save.
+This project is released under the MIT License. See [LICENSE](LICENSE) for details.
